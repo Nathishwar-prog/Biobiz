@@ -1,0 +1,274 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #6f42c1;
+    --background-color: #f4f7f6;
+    --text-color: #333;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Preloader Styles */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Smooth Navigation */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    opacity: 0.9;
+    z-index: 1;
+}
+
+.hero-image-container {
+    position: relative;
+    z-index: 2;
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Services Section */
+.services-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.3d-hover-card {
+    perspective: 1000px;
+}
+
+.3d-hover-card:hover {
+    transform: rotateX(10deg) rotateY(-10deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.service-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Contact Section */
+/* Contact Section Glassmorphism */
+.glass-form {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-form .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(74, 144, 226, 0.25);
+}
+
+.submit-button {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: darken(var(--primary-color), 10%);
+    transform: translateY(-5px);
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 50px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* Reveal Animations */
+.reveal-animation {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.reveal-animation.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        min-height: 80vh;
+    }
+
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-buttons .btn {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+/* Utility Classes */
+.text-highlight {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.z-index-1 {
+    position: relative;
+    z-index: 1;
+}
+
+/* Wave Separator */
+.wave-separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-separator svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 120px;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darken(var(--primary-color), 10%);
+}
+
+/* Accessibility and Focus States */
+*:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+/* Text Selection */
+::selection {
+    background-color: var(--primary-color);
+    color: white;
+}
